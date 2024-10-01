@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures the page is responsive on all devices -->
+    <title>Portfolio</title> <!-- Sets the title of the webpage in the browser tab -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" /> <!-- Links to the Bootstrap CSS file for styling -->
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css"> <!-- Links to Material Design Icons for icons -->
+    <link rel="stylesheet" href="assets/css/animate.min.css"> <!-- Links to animate.css for animations -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Links to the custom style sheet for additional styling -->
+</head>
+
+<body>
+
+    <!-- Navigation bar section -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav sticky"> <!-- Creates a responsive navigation bar -->
+        <div class="container"> <!-- Bootstrap container to align content -->
+            <a class='navbar-brand logo' href='index.html'> <!-- Brand logo or website title -->
+                <h1>Santhosh</h1> <!-- Displays the name "Santhosh" as a heading -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
+                aria-label="Toggle navigation"> <!-- Button for toggling the navigation menu on smaller screens -->
+                <i class="mdi mdi-menu"></i> <!-- Icon for the menu button -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Collapsible content for the menu -->
+                <ul class="navbar-nav ms-auto"> <!-- Unordered list for navigation links aligned to the right -->
+                    <li class="nav-item active"> <!-- Navigation list item -->
+                        <a href="#home" class="nav-link">Home</a> <!-- Link to the Home section -->
+                    </li>
+                    <li class="nav-item"> <!-- Navigation list item -->
+                        <a href="#about" class="nav-link">About</a> <!-- Link to the About section -->
+                    </li>
+                    <li class="nav-item"> <!-- Navigation list item -->
+                        <a href="#projects" class="nav-link">Projects</a> <!-- Link to the Projects section -->
+                    </li>
+                    <li class="nav-item"> <!-- Navigation list item -->
+                        <a href="#contact" class="nav-link">Contact</a> <!-- Link to the Contact section -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home section -->
+    <section class="home-bg section h-100vh" id="home"> <!-- Full-screen home section with background -->
+        <div class="bg-overlay"></div> <!-- Overlay for background effects -->
+        <div class="container z-index"> <!-- Container to align content -->
+            <div class="row justify-content-center"> <!-- Row to center the content -->
+                <div class="col-lg-12"> <!-- Full-width column -->
+                    <div class="text-white text-center"> <!-- White text aligned to the center -->
+                        <h4>Hello & Welcome</h4> <!-- Displays the welcome message -->
+                        <h1 class="header_title mb-0 mt-3">I Am <span class="element fw-bold"
+                                data-elements="A Designer.,A Front-end Developer.,A Software Developer.,A Database Maintainer"></span>
+                        </h1> <!-- Header introducing the individual, with rotating job titles using a span -->
+                        <ul class="social_home list-unstyled text-center pt-4"> <!-- List of social media icons -->
+                            <li class="list-inline-item"><a href="javascript:void(0)" target="_blank"><i
+                                        class="mdi mdi-facebook"></i></a></li> <!-- Facebook icon with a link -->
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/santhosh-c-13669a291/"
+                                    target="_blank"><i class="mdi mdi-linkedin"></i></a></li> <!-- LinkedIn icon with link -->
+                            <li class="list-inline-item"><a href="javascript:void(0)" target="_blank"><i
+                                        class="mdi mdi-twitter"></i></a></li> <!-- Twitter icon with a link -->
+                        </ul>
+                        <div class="header_btn"> <!-- Button for downloading the resume -->
+                            <a href="../design/assets/Resume/Snathosh-resume.pdf" target="_blank"
+                                class="btn btn-outline-custom btn-rounded mt-4">Download CV</a> <!-- Link to download resume -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll_down"> <!-- Scroll down icon to guide user -->
+            <a href="#about" class="scroll"> <!-- Link to scroll down to the About section -->
+                <i class="mbri-arrow-down text-white"></i> <!-- Arrow icon for scrolling -->
+            </a>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="section"> <!-- Section to describe the individual -->
+        <div class="content"> <!-- Content wrapper -->
+            <h2>About Me</h2> <!-- Section title -->
+            <p><strong>SANTHOSH C</strong></p> <!-- Bold name -->
+            <p>Email: sahoosanthosh65@gmail.com</p> <!-- Email information -->
+            <p>Contact No: +91-7538898543</p> <!-- Contact information -->
+            <h3>Professional Summary</h3> <!-- Subheading for summary -->
+            <ul> <!-- Unordered list of professional skills -->
+                <li>Good understanding of the Object-Oriented Programming System (OOPS).</li>
+                <li>Strong knowledge of problem-solving and troubleshooting.</li>
+                <li>Good knowledge of front-end technologies like HTML, CSS, Bootstrap, and JavaScript.</li>
+                <li>Ability to implement projects along with data structures and design patterns.</li>
+                <li>Excellent database programming skills with databases like SQL.</li>
+                <li>Goal-oriented team player, self-starter, and quick learner.</li>
+            </ul>
+            <h3>Technical Skills</h3> <!-- Subheading for technical skills -->
+            <ul> <!-- Unordered list of technical skills -->
+                <li>Operating systems: Linux, Windows.</li>
+                <li>Programming Languages: C, C++, Java.</li>
+                <li>Scripting Languages: HTML, CSS, JavaScript, SQL.</li>
+                <li>RDBMS/NoSQL: MySQL 5.6.</li>
+                <li>Web Server/Client Technologies: HTML, CSS, Bootstrap.</li>
+                <li>Development Tools: IntelliJ, NetBeans, Visual Studio, Eclipse.</li>
+                <li>Other Tools: GitHub, MS Office, MS Word, MS PowerPoint, Canva, Photoshop, UI & UX.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="section" id="projects"> <!-- Section to showcase projects -->
+        <div class="containe"> <!-- Typo: Should be "container", aligns content -->
+            <h2 class="section-title">Projects</h2> <!-- Section title for projects -->
+            <div class="projects-table"> <!-- Table container for projects -->
+                <table> <!-- Table to display project details -->
+                    <thead> <!-- Table header -->
+                        <tr>
+                            <th>S.No</th> <!-- Serial number column -->
+                            <th>Name of Project</th> <!-- Project name column -->
+                            <th>Type</th> <!-- Type of project (e.g., Web, Software) -->
+                            <th>Link</th> <!-- Link to project -->
+                        </tr>
+                    </thead>
+                    <tbody> <!-- Table body for project rows -->
+                        <tr>
+                            <td>1</td> <!-- Project 1 serial number -->
+                            <td>Nursing Web Page</td> <!-- Project 1 name -->
+                            <td>Web Development</td> <!-- Project 1 type -->
+                            <td><a href="https://github.com/yourusername/nursing-web-page" target="_blank">View</a></td> <!-- Link to view Project 1 -->
+                        </tr>
+                        <tr>
+                            <td>2</td> <!-- Project 2 serial number -->
+                            <td>Student Information System</td> <!-- Project 2 name -->
+                            <td>Software Development</td> <!-- Project 2 type -->
+                            <td><a href="https://github.com/yourusername/student-info-system" target="_blank">View</a>
+                            </td> <!-- Link to view Project 2 -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact"> <!-- Section for contact information -->
+        <div class="contact-container"> <!-- Container for contact details -->
+            <div class="photo-container"> <!-- Container for profile picture -->
+                <img src="../design/assets/images/profilepic.png" alt="Your Photo" class="fade-in"> <!-- Profile picture -->
+            </div>
+            <div class="contact-info"> <!-- Container for contact details -->
+                <h2>Contact Information</h2> <!-- Title for contact info -->
+                <p>Email: sahoosanthosh65@gmail.com</p> <!-- Contact email -->
+                <p>Phone: +91-7538898543</p> <!-- Contact phone number -->
+                <p>Address: No, 91 Alli Kulam St, Natha Kovil Thibbai, Perathur Post, Thiruvallur, Chennai - 602021</p> <!-- Address -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Script section -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
+    <script src="assets/js/jquery.min.js"></script> <!-- jQuery library -->
+    <script src="assets/js/typed.js"></script> <!-- Typed.js library for typing animation -->
+    <script>
+        $(".element").each(function () { //Initialize Typed.js for rotating text
+            var $this = $(this); //Cache the current element
+            $this.typed({
+                strings: $this.attr('data-elements').split(','), //Get the data-elements attribute values and split into array
+                typeSpeed: 100,  //Speed of typing
+                backDelay: 3000 //Delay before backspacing starts
+            }//
+        )}
+    );
+
+        const contactSection = document.getElementById('contact'); //Get the contact section element
+        const contactInfo = document.querySelector('.contact-info');  //Get the contact info element 
+        const photo = document.querySelector('.photo-container img');  //Get the photo element 
+
+        const observerOptions = {
+            root: null, //Observing the viewport//
+            threshold: 0.1 //The amount of element visible to trigger animation//
+        };
+
+        const observer = new IntersectionObserver((entries) => {  //Create a new intersection observer  //
+            entries.forEach(entry => {  //Loop through observed entries  //
+                if (entry.isIntersecting) {   //If the entry is in view -->
+                    contactInfo.classList.add('animate');  //Add animation class to contact info  //
+                    photo.classList.add('animate');  //Add animation class to photo  //
+                } else {  //If entry is not in view  //
+                    contactInfo.classList.remove('animate');  //Remove animation class from contact info  //
+                    photo.classList.remove('animate');  //Remove animation class from photo  //
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(contactSection);  //Start observing the contact section  //
+    </script>
+</body>
+
+</html>

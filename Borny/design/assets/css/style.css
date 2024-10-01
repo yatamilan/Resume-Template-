@@ -1,0 +1,904 @@
+/* Importing Google Fonts: Montserrat and Nunito */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito:400,600,700");
+
+/* General body styles */
+body {
+  font-family: "Nunito", sans-serif; /* Setting the default font for the body */
+  overflow-x: hidden; /* Preventing horizontal overflow */
+}
+
+/* Styles for all heading elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif; /* Setting Montserrat as the font for headings */
+}
+
+/* Applying bold font weight to specific heading classes */
+h1.fw-bold,
+h2.fw-bold,
+h3.fw-bold,
+h4.fw-bold,
+h5.fw-bold,
+h6.fw-bold {
+  font-weight: 600 !important; /* Making the font weight bold */
+}
+
+/* General link and button styles */
+a,
+a:hover,
+a:focus,
+button,
+button:focus {
+  text-decoration: none !important; /* Removing underline from links */
+  outline: none !important; /* Removing focus outline */
+  box-shadow: none !important; /* Removing box shadow */
+}
+
+/* Selection styles for highlighted text */
+::selection {
+  background: rgba(166, 175, 189, 0.3); /* Light grey background for selected text */
+}
+
+/* Firefox-specific selection styles */
+::-moz-selection {
+  background: rgba(166, 175, 189, 0.3); /* Light grey background for selected text in Firefox */
+}
+
+/* Preloader styles */
+#preloader {
+  position: fixed; /* Fixed positioning to cover the entire viewport */
+  top: 0; /* Aligning to the top */
+  left: 0; /* Aligning to the left */
+  right: 0; /* Aligning to the right */
+  bottom: 0; /* Aligning to the bottom */
+  background-color: #fff; /* White background for preloader */
+  z-index: 9999999; /* High z-index to ensure it stays on top */
+}
+
+/* Status indicator for preloader */
+#status {
+  width: 40px; /* Width of the status element */
+  height: 40px; /* Height of the status element */
+  position: absolute; /* Absolute positioning for centering */
+  left: 50%; /* Centering horizontally */
+  top: 50%; /* Centering vertically */
+  margin: -20px 0 0 -20px; /* Adjusting margin to center the element */
+}
+
+/* Spinner styles for loading animation */
+.spinner {
+  margin: 0 auto; /* Centering the spinner */
+  font-size: 10px; /* Font size for accessibility (not visible) */
+  position: relative; /* Relative positioning for inner elements */
+  text-indent: -9999em; /* Hiding text visually */
+  border-top: 5px solid rgba(0, 0, 0, 0.2); /* Top border with light grey color */
+  border-right: 5px solid rgba(0, 0, 0, 0.2); /* Right border with light grey color */
+  border-bottom: 5px solid rgba(0, 0, 0, 0.2); /* Bottom border with light grey color */
+  border-left: 5px solid #000; /* Left border with black color */
+  -webkit-transform: translateZ(0); /* Triggering hardware acceleration */
+  -ms-transform: translateZ(0); /* Triggering hardware acceleration for IE */
+  transform: translateZ(0); /* Triggering hardware acceleration */
+  -webkit-animation: load8 1.1s infinite linear; /* Applying loading animation */
+  animation: load8 1.1s infinite linear; /* Applying loading animation */
+}
+
+/* Ensuring the spinner has a circular shape */
+.spinner,
+.spinner:after {
+  border-radius: 50%; /* Making the spinner circular */
+  width: 40px; /* Width of the spinner */
+  height: 40px; /* Height of the spinner */
+}
+
+/* Keyframes for the loading animation */
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg); /* Starting rotation */
+    transform: rotate(0deg); /* Starting rotation */
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg); /* Full rotation */
+    transform: rotate(360deg); /* Full rotation */
+  }
+}
+
+/* Keyframes for the loading animation named 'load8' */
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg); /* At the start, rotate 0 degrees (not rotated) */
+    transform: rotate(0deg); /* At the start, rotate 0 degrees (not rotated) */
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg); /* At the end, rotate a full circle (360 degrees) */
+    transform: rotate(360deg); /* At the end, rotate a full circle (360 degrees) */
+  }
+}
+
+/* Styles for the "back to top" button */
+.back_top {
+  text-align: center; /* Center the text inside the button */
+  position: fixed; /* Fix the button's position on the screen */
+  bottom: 15px; /* Position it 15 pixels from the bottom of the screen */
+  height: 35px; /* Set the height of the button to 35 pixels */
+  width: 35px; /* Set the width of the button to 35 pixels */
+  background-color: #000; /* Set the button's background color to black */
+  display: none; /* Hide the button by default */
+  z-index: 10000; /* Set a high z-index to make sure it appears above other elements */
+  border-radius: 3px; /* Round the corners of the button */
+  right: 20px; /* Position it 20 pixels from the right side of the screen */
+  transition: all 0.5s; /* Add a smooth transition effect for any changes */
+}
+
+/* Styles for the icon inside the "back to top" button */
+.back_top i {
+  color: #fff; /* Set the icon color to white */
+  line-height: 35px; /* Center the icon vertically within the button */
+  font-size: 12px; /* Set the size of the icon to 12 pixels */
+  display: block; /* Make the icon a block element for proper sizing */
+}
+
+/* General styles for sections on the page */
+.section {
+  padding-top: 80px; /* Add 80 pixels of space at the top of the section */
+  padding-bottom: 80px; /* Add 80 pixels of space at the bottom of the section */
+  position: relative; /* Set a relative position for child elements */
+  background-color: #fff; /* Set the background color of the section to white */
+}
+
+/* Styles for dark background sections */
+.bg-dark {
+  background-color: #000; /* Set the background color to black */
+}
+
+/* Custom dark background class */
+.bg-custom {
+  background-color: #000; /* Set the background color to black */
+}
+
+/* Custom text color for dark text */
+.text-dark {
+  color: #000 !important; /* Force the text color to black, overriding other styles */
+}
+
+/* Styles for pagination links */
+.page_link {
+  font-size: 14px; /* Set the font size for pagination links to 14 pixels */
+}
+
+/* Styles for links within pagination */
+.page_link a {
+  color: rgba(255, 255, 255, 0.55); /* Set link color to a semi-transparent white */
+}
+
+/* Styles for muted text */
+.text-muted {
+  color: #777; /* Set muted text color to a light grey */
+}
+
+/* Custom text color class */
+.text-custom {
+  color: #000 !important; /* Force the text color to black, overriding other styles */
+}
+
+/* Full height class */
+.h-100vh {
+  height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+/* Class to set z-index */
+.z-index {
+  z-index: 2; /* Set z-index to 2 to control stacking order of elements */
+}
+
+/* Custom dark background class (duplicate) */
+.bg-custom {
+  background-color: #000; /* Set the background color to black */
+}
+
+/* Styles for the main title of the section */
+.section-main-title {
+  max-width: 570px; /* Set the maximum width of the title to 570 pixels */
+}
+
+/* Styles for the title border, adding pseudo-elements before and after the title */
+.main-title-border::after,
+.main-title-border::before {
+  display: inline-block; /* Display the pseudo-elements as inline-blocks to align them with text */
+  margin-top: -7px; /* Move the elements up slightly to overlap with the title */
+  vertical-align: middle; /* Vertically align the elements with the middle of the text */
+  content: ""; /* Set the content of the pseudo-elements to empty */
+  background-color: #d0d0d0; /* Set the background color of the elements to light grey */
+  width: 30px; /* Set the width of the elements to 30 pixels */
+  height: 1px; /* Set the height of the elements to 1 pixel (like a line) */
+}
+
+/* Styles for icons inside the main title border */
+.main-title-border i {
+  font-size: 20px; /* Set the font size of the icon to 20 pixels */
+}
+
+/* Styles for a gradient overlay background */
+.bg-overlay-gredient {
+  background: linear-gradient(32deg, rgba(18, 166, 181, 0.8) 0%, rgba(16, 12, 242, 0.7) 100%); /* Set a diagonal gradient background from one color to another */
+  position: absolute; /* Position the overlay absolutely relative to the nearest positioned ancestor */
+  top: 0; /* Position the overlay at the top of the parent element */
+  right: 0; /* Position the overlay at the right of the parent element */
+  left: 0; /* Position the overlay at the left of the parent element */
+  bottom: 0; /* Position the overlay at the bottom of the parent element */
+  width: 100%; /* Set the width of the overlay to 100% of the parent element */
+  height: 100%; /* Set the height of the overlay to 100% of the parent element */
+}
+
+/* Styles for a dark overlay background */
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.7); /* Set a semi-transparent black background */
+  position: absolute; /* Position the overlay absolutely relative to the nearest positioned ancestor */
+  top: 0; /* Position the overlay at the top of the parent element */
+  right: 0; /* Position the overlay at the right of the parent element */
+  left: 0; /* Position the overlay at the left of the parent element */
+  bottom: 0; /* Position the overlay at the bottom of the parent element */
+  width: 100%; /* Set the width of the overlay to 100% of the parent element */
+  height: 100%; /* Set the height of the overlay to 100% of the parent element */
+}
+
+/* Styles for buttons */
+.btn {
+  padding: 12px 26px; /* Add padding (space inside the button) of 12 pixels top/bottom and 26 pixels left/right */
+}
+
+/* Styles for rounded buttons */
+.btn-rounded {
+  border-radius: 30px; /* Round the corners of the button with a radius of 30 pixels */
+}
+
+/* Styles for custom outline buttons */
+.btn-outline-custom {
+  background-color: transparent; /* Set the background color to transparent (invisible) */
+  border: 2px solid #fff; /* Set a white border of 2 pixels */
+  color: #fff; /* Set the text color to white */
+  letter-spacing: 1px; /* Add space between letters */
+  transition: all 0.5s; /* Add a smooth transition effect for all changes over 0.5 seconds */
+  font-size: 15px; /* Set the font size of the button text to 15 pixels */
+}
+
+/* Styles for the hover and focus states of the custom outline button */
+.btn-outline-custom:hover,
+.btn-outline-custom:focus,
+.btn-outline-custom:active,
+.btn-outline-custom.active,
+.btn-outline-custom.focus,
+.btn-outline-custom:active,
+.btn-outline-custom:focus,
+.btn-outline-custom:hover,
+.open > .dropdown-toggle.btn-outline-custom {
+  background-color: #fff !important; /* Change the background color to white when hovered or focused */
+  border-color: #fff !important; /* Change the border color to white when hovered or focused */
+  color: #000 !important; /* Change the text color to black when hovered or focused */
+}
+
+/* Styles for black outline buttons */
+.btn-outline-black {
+  background-color: transparent; /* Set the background color to transparent (invisible) */
+  border: 2px solid #000; /* Set a black border of 2 pixels */
+  color: #000; /* Set the text color to black */
+  font-weight: 600; /* Set the font weight to 600 (bold) */
+  letter-spacing: 1px; /* Add space between letters */
+  transition: all 0.5s; /* Add a smooth transition effect for all changes over 0.5 seconds */
+  font-size: 15px; /* Set the font size of the button text to 15 pixels */
+}
+
+/* Styles for the hover and focus states of the black outline button */
+.btn-outline-black:hover,
+.btn-outline-black:focus,
+.btn-outline-black:active,
+.btn-outline-black.active,
+.btn-outline-black.focus,
+.btn-outline-black:active,
+.btn-outline-black:focus,
+.btn-outline-black:hover,
+.open > .dropdown-toggle.btn-outline-black {
+  background-color: #000 !important; /* Change the background color to black when hovered or focused */
+  border-color: #000 !important; /* Change the border color to black when hovered or focused */
+  color: #fff !important; /* Change the text color to white when hovered or focused */
+}
+
+/* Styles for custom buttons on hover, focus, and active states */
+.btn-custom:hover, /* When the button is hovered */
+.btn-custom:focus, /* When the button is focused (clicked on) */
+.btn-custom:active, /* When the button is actively being pressed */
+.btn-custom.active, /* When the button has an 'active' class */
+.btn-custom.focus, /* When the button has a 'focus' class */
+.btn-custom:active, /* Again for active state */
+.btn-custom:focus, /* Again for focus state */
+.btn-custom:hover, /* Again for hover state */
+.open > .dropdown-toggle.btn-custom { /* When a dropdown is opened with this button */
+  background-color: #fff; /* Set the background color to white */
+  border-color: #000; /* Set the border color to black */
+  color: #000; /* Set the text color to black */
+}
+
+/* Styles for the home background section */
+.home-bg {
+  background-image: url(../images/modern-2.jpg); /* Set the background image from the specified path */
+  background-position: center center; /* Center the background image */
+  background-size: cover; /* Make the background cover the entire element */
+  position: relative; /* Set the position to relative for child positioning */
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically within the flex container */
+}
+
+/* Styles for centering content in the home section */
+.home-table-center {
+  display: table-cell; /* Display as a table cell to allow vertical alignment */
+  vertical-align: middle; /* Vertically align content in the middle */
+}
+
+/* Styles for the table that holds the content */
+.home-table {
+  display: table; /* Display as a table */
+  width: 100%; /* Set the width to 100% of the parent element */
+  height: 100%; /* Set the height to 100% of the parent element */
+}
+
+/* Styles for the main header title */
+.header_title {
+  font-size: 72px; /* Set the font size to 72 pixels */
+  font-weight: 400; /* Set the font weight to normal */
+  line-height: 1.2; /* Set the line height to 1.2 times the font size */
+  text-transform: capitalize; /* Capitalize the first letter of each word */
+}
+
+/* Styles for the header subtitle */
+.header_subtitle {
+  line-height: 2; /* Set the line height to 2 times the font size */
+  font-size: 18px; /* Set the font size to 18 pixels */
+  max-width: 600px; /* Set the maximum width to 600 pixels */
+}
+
+/* Styles for social media links in the home section */
+.social_home li a {
+  font-size: 18px; /* Set the font size of the links to 18 pixels */
+  color: #ffffff; /* Set the text color to white */
+  display: inline-block; /* Display the links as inline-blocks */
+  width: 30px; /* Set the width of the links to 30 pixels */
+  text-align: center; /* Center the text within the links */
+}
+
+/* Styles for the scroll down indicator */
+.scroll_down {
+  position: absolute; /* Position it absolutely within the nearest positioned ancestor */
+  bottom: 5vh; /* Position it 5% of the viewport height from the bottom */
+  width: 100%; /* Set the width to 100% of the parent element */
+  text-align: center; /* Center the text within the element */
+  color: #fff; /* Set the text color to white */
+  font-size: 13px; /* Set the font size to 13 pixels */
+  z-index: 8; /* Set a stacking order for the element */
+}
+
+/* Styles for the icon within the scroll down indicator */
+.scroll_down i {
+  position: relative; /* Position it relative for absolute positioning of children */
+  -webkit-animation: bounce 2s infinite; /* Apply bounce animation for WebKit browsers */
+  animation: bounce 2s infinite; /* Apply bounce animation infinitely */
+  height: 50px; /* Set the height of the icon to 50 pixels */
+  width: 30px; /* Set the width of the icon to 30 pixels */
+  line-height: 60px; /* Set the line height to 60 pixels to center the icon */
+  border-radius: 30px; /* Round the corners of the icon */
+  border: 2px solid #ffffff; /* Set a white border of 2 pixels */
+  display: inline-block; /* Display the icon as an inline-block element */
+  color: #fff; /* Set the icon color to white */
+  font-size: 12px; /* Set the font size of the icon to 12 pixels */
+}
+
+/* Styles for the pseudo-element after the scroll down icon */
+.scroll_down i:after {
+  content: ""; /* Set the content of the pseudo-element to empty */
+  position: absolute; /* Position it absolutely within the icon */
+  top: 0; /* Position it at the top of the icon */
+  left: 0; /* Position it at the left of the icon */
+  width: 100%; /* Set the width to 100% of the icon */
+  height: 100%; /* Set the height to 100% of the icon */
+  border-radius: 50%; /* Make the pseudo-element circular */
+  z-index: -1; /* Set a lower stacking order so it appears behind the icon */
+  transition: all 0.2s; /* Add a smooth transition effect for all changes over 0.2 seconds */
+}
+/* Styles for the custom navigation bar */
+.custom-nav {
+  padding: 15px 0px; /* Add 15 pixels of padding to the top and bottom, and 0 pixels to the left and right */
+  width: 100%; /* Set the width to 100% of the parent container */
+  border-radius: 0px; /* No rounded corners */
+  z-index: 999; /* Set a high stacking order to ensure it appears on top of other elements */
+  margin-bottom: 0px; /* No margin below the navigation */
+  transition: all 0.5s ease-in-out; /* Smooth transition effect for all properties over 0.5 seconds */
+  background-color: transparent; /* Start with a transparent background */
+}
+
+/* Styles for the navigation when it becomes sticky */
+.custom-nav.stickyadd {
+  background-color: #fff; /* Set background color to white when sticky */
+  padding: 8px 0; /* Add 8 pixels of padding to the top and bottom */
+  box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1); /* Add a soft shadow effect */
+}
+
+/* Styles for the navigation links when sticky */
+.custom-nav.stickyadd .navbar-nav li a {
+  color: #000; /* Change text color to black */
+}
+
+/* Styles for the navigation link before pseudo-element when sticky */
+.custom-nav.stickyadd .navbar-nav li a:before {
+  background: #000 !important; /* Set background color of the pseudo-element to black */
+}
+
+/* Styles for the navigation links */
+.custom-nav .navbar-nav li a {
+  color: #fff; /* Set text color to white */
+  font-size: 16px; /* Set font size to 16 pixels */
+  background-color: transparent !important; /* Ensure the background is transparent */
+  padding: 15px 0; /* Add 15 pixels of padding to the top and bottom */
+  position: relative; /* Set position to relative for positioning child elements */
+  margin: 0 7px; /* Add 0 pixels of margin to the top and bottom, and 7 pixels to the left and right */
+  font-weight: 600; /* Set font weight to bold */
+  transition: all 0.4s; /* Smooth transition effect for all properties over 0.4 seconds */
+}
+
+/* Styles for active and hovered links */
+.custom-nav .navbar-nav li.active a:before, /* When the link is active */
+.custom-nav .navbar-nav li:hover a:before, /* When the link is hovered */
+.custom-nav .navbar-nav li:active a:before, /* When the link is actively being clicked */
+.custom-nav.stickyadd .navbar-nav li.active a:before, /* When the link is active and sticky */
+.custom-nav.stickyadd .navbar-nav li:hover a:before, /* When the link is hovered and sticky */
+.custom-nav.stickyadd .navbar-nav li:active a:before { /* When the link is active and sticky */
+  opacity: 1; /* Make the pseudo-element fully visible */
+}
+
+/* Styles for the before pseudo-element of the links */
+.custom-nav .navbar-nav li a:before, /* Pseudo-element for normal links */
+.custom-nav.stickyadd .navbar-nav li a:before { /* Pseudo-element for sticky links */
+  content: ""; /* Set the content to empty */
+  position: absolute; /* Position it absolutely within the link */
+  left: 50%; /* Position it in the center horizontally */
+  bottom: 10%; /* Position it 10% from the bottom of the link */
+  height: 6px; /* Set the height to 6 pixels */
+  width: 6px; /* Set the width to 6 pixels */
+  background: #fff; /* Set the background color to white */
+  border-radius: 50%; /* Make it circular */
+  opacity: 0; /* Start fully transparent */
+  transform: translateX(-50%); /* Center it horizontally */
+  transition: all 0.3s ease 0s; /* Smooth transition effect for all changes over 0.3 seconds */
+}
+
+/* Styles for the toggle button of the navbar */
+.navbar-toggler {
+  font-size: 24px; /* Set the font size to 24 pixels */
+  margin-top: 5px; /* Add 5 pixels of margin to the top */
+  margin-bottom: 0px; /* No margin below */
+  color: #ffffff; /* Set text color to white */
+}
+
+/* Styles for the toggle button of the navbar (alternative class) */
+.navbar-toggle {
+  font-size: 24px; /* Set the font size to 24 pixels */
+  margin-top: 5px; /* Add 5 pixels of margin to the top */
+  margin-bottom: 0px; /* No margin below */
+  color: #ffffff; /* Set text color to white */
+}
+
+/* Styles for opened dropdown links */
+.nav .open > a, /* When the dropdown is open and links are hovered */
+.nav .open > a:focus, /* When the link is focused */
+.nav .open > a:hover { /* When the link is hovered */
+  background-color: transparent; /* Keep background transparent */
+  border-color: #337ab7; /* Set border color to a specific blue */
+}
+
+/* Styles for the logo text */
+.logo {
+  color: white; /* Set logo text color to white */
+}
+
+/* Styles for the light version of the logo */
+.logo .logo-light {
+  display: inline-block; /* Display as inline-block for proper alignment */
+}
+
+/* Styles for the logo when the navigation bar is sticky */
+.stickyadd .logo .logo-dark {
+  display: inline-block; /* Display the dark version of the logo as inline-block when sticky */
+}
+
+/* Styles for the light logo when the navigation bar is sticky */
+.stickyadd .logo .logo-light {
+  display: none; /* Hide the light version of the logo when sticky */
+}
+
+/* Styles for the dark logo */
+.logo .logo-dark {
+  display: none; /* Hide the dark logo by default */
+}
+
+/* Styles for the logo image in the brand */
+.custom-nav .navbar-brand.logo img {
+  height: 28px; /* Set the height of the logo image to 28 pixels */
+}
+
+/* Styles for the logo text */
+.custom-nav .logo {
+  color: #fff; /* Set the text color of the logo to white */
+  font-size: 1.8rem; /* Set the font size to 1.8 rem */
+}
+
+/* Styles for the home section */
+#home {
+  height: 100vh; /* Set height to 100% of the viewport height */
+  background: url('../images/modern-2.jpg') no-repeat center center/cover; /* Set background image to cover the area */
+}
+
+/* Styles for the about section */
+#about {
+  position: relative; /* Position relative for absolute positioning of child elements */
+  height: 100vh; /* Set height to 100% of the viewport height */
+  padding-top: 100px; /* Add 100 pixels of padding to the top */
+  width: 100%; /* Set width to 100% of the parent container */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  color: white; /* Set text color to white */
+  text-align: center; /* Center text alignment */
+  background-image: url('../images/About-bg.jpg'); /* Set background image for the about section */
+  background-size: cover; /* Cover the entire section with the background image */
+  background-position: center; /* Center the background image */
+  transition: background-image 0.8s ease-in-out; /* Smooth transition for background image changes */
+}
+
+/* Overlay styles for the about section */
+#about::before {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute; /* Position absolutely to cover the section */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  bottom: 0; /* Align to the bottom */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for overlay effect */
+  z-index: 1; /* Set z-index to 1 to position above other elements */
+}
+
+/* Styles for the content of the about section */
+.content {
+  position: relative; /* Position relative for stacking context */
+  z-index: 2; /* Set z-index to 2 to position above the overlay */
+}
+
+/* Styles for the h2 heading */
+h2 {
+  font-size: 3rem; /* Set font size to 3 rem */
+}
+
+/* Styles for paragraph text */
+p {
+  font-size: 1.5rem; /* Set font size to 1.5 rem */
+}
+
+/* Smooth scrolling behavior for the entire page */
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Reset padding and margin for home and about sections */
+#home, #about {
+  padding: 0; /* No padding */
+  margin: 0; /* No margin */
+}
+
+/* Styles for the projects section */
+#projects {
+  background: url('../images/Project-bg.jpg') no-repeat center center fixed; /* Set background image with fixed position */
+  background-size: cover; /* Cover the entire section with the background image */
+  height: 100vh; /* Set height to 100% of the viewport height */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Container styles for project content */
+.containe {
+  width: 90%; /* Set width to 90% of the parent container */
+  max-width: 1200px; /* Maximum width set to 1200 pixels */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners with a radius of 10 pixels */
+  padding: 20px; /* Add 20 pixels of padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft shadow effect */
+}
+
+/* Styles for the projects table */
+.projects-table {
+  overflow-x: auto; /* Enable horizontal scrolling if the table overflows */
+}
+
+/* Styles for the table */
+table {
+  width: 100%; /* Set table width to 100% of the parent container */
+  border-collapse: collapse; /* Collapse table borders for a cleaner look */
+  margin-top: 20px; /* Add a margin of 20 pixels at the top */
+  background-color: rgba(255, 255, 255, 0.8); /* Set a semi-transparent white background */
+  border-radius: 10px; /* Round the corners of the table with a 10-pixel radius */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect for depth */
+}
+
+/* Styles for table header and data cells */
+th, td {
+  padding: 15px; /* Add 15 pixels of padding to table cells */
+  text-align: left; /* Align text to the left */
+}
+
+/* Styles for table header cells */
+th {
+  background-color: #4CAF50; /* Set a green background color for the header */
+  color: white; /* Set the text color to white */
+  font-weight: 600; /* Set font weight to bold */
+}
+
+/* Styles for table data cells */
+td {
+  border-bottom: 1px solid #ddd; /* Add a light gray border below each data cell */
+}
+
+/* Styles for links inside data cells */
+td a {
+  color: #2196F3; /* Set link color to a blue shade */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Styles for links on hover */
+td a:hover {
+  text-decoration: underline; /* Underline links when hovered over */
+}
+
+/* Styles for section titles */
+.section-title {
+  color: white; /* Set section title color to white */
+}
+
+/* Styles for the contact section */
+#contact {
+  position: relative; /* Position relative for absolute positioning of child elements */
+  height: 100vh; /* Set height to 100% of the viewport height */
+  background-image: url('../images/contact-bg.jpg'); /* Set background image for the contact section */
+  background-size: cover; /* Cover the entire section with the background image */
+  background-position: center; /* Center the background image */
+}
+
+/* Container styles for contact information */
+.contact-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically within the container */
+  height: 100%; /* Set height to 100% of the parent container */
+  padding: 20px; /* Add 20 pixels of padding */
+}
+
+/* Styles for the photo container */
+.photo-container {
+  flex: 0 0 200px; /* Fixed width of 200 pixels */
+  overflow: hidden; /* Hide any overflow content */
+  position: relative; /* Position relative for stacking context */
+}
+
+/* Styles for the image inside the photo container */
+.photo-container img {
+  width: 100%; /* Set image width to fill the container */
+  height: auto; /* Maintain aspect ratio of the image */
+  opacity: 0; /* Set initial opacity to 0 (invisible) */
+  transition: opacity 2s; /* Smooth transition for opacity changes */
+}
+
+/* Styles for the animated image */
+.photo-container img.animate {
+  opacity: 1; /* Set opacity to 1 (visible) when animated */
+}
+
+/* Styles for the contact information */
+.contact-info {
+  opacity: 0; /* Set initial opacity to 0 (invisible) */
+  transition: opacity 2s; /* Smooth transition for opacity changes */
+  color: #ffffff; /* Set text color to white */
+}
+
+/* Styles for the animated contact information */
+.contact-info.animate {
+  opacity: 1; /* Set opacity to 1 (visible) when animated */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fade-in {
+  0% {
+      opacity: 0; /* Start with the element fully transparent */
+  }
+  100% {
+      opacity: 1; /* End with the element fully opaque */
+  }
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slide-in {
+  0% {
+      transform: translateX(100%); /* Start by moving the element off the screen to the right */
+      opacity: 0; /* Start with the element fully transparent */
+  }
+  100% {
+      transform: translateX(0); /* End with the element in its original position */
+      opacity: 1; /* End with the element fully opaque */
+  }
+}
+
+/* Media query for responsive styles on screens smaller than 768 pixels */
+@media (max-width: 768px) {
+  .custom-nav {
+    margin-top: 0px; /* Remove margin at the top */
+    padding: 10px 0px !important; /* Set padding on top and bottom */
+    background-color: #fff !important; /* Set background color to white */
+  }
+
+  /* Logo color adjustment for smaller screens */
+  .custom-nav .logo {
+    color: #000; /* Set logo color to black */
+  }
+
+  /* Styles for navigation links */
+  .custom-nav .navbar-nav li a {
+    margin: 0 0px; /* Remove horizontal margin */
+    padding: 6px 0; /* Set padding on top and bottom */
+    color: rgba(0, 0, 0, 0.55) !important; /* Set text color with a slight transparency */
+  }
+
+  /* Remove the decorative element before the navigation link */
+  .custom-nav .navbar-nav li a:before {
+    content: ""; /* No content */
+    display: none; /* Hide the element */
+  }
+
+  /* Styles for active navigation links */
+  .custom-nav .navbar-nav li.active a {
+    color: #000 !important; /* Set active link color to black */
+  }
+
+  /* Adjust the width of the navigation container */
+  .custom-nav>.container {
+    width: 90%; /* Set width to 90% of the parent container */
+  }
+
+  /* Display the dark logo on smaller screens */
+  .custom-nav .logo .logo-dark {
+    display: inline-block; /* Show the dark logo */
+  }
+
+  /* Hide the light logo on smaller screens */
+  .custom-nav .logo .logo-light {
+    display: none; /* Hide the light logo */
+  }
+
+  /* Adjust logo image size */
+  .custom-nav .navbar-brand.logo img {
+    height: 26px; /* Set logo image height */
+  }
+
+  /* Adjust navigation margin */
+  .navbar-nav {
+    margin-top: 0px; /* Remove top margin */
+  }
+
+  /* Styles for the hamburger menu button */
+  .navbar-toggler {
+    font-size: 29px; /* Set font size for the toggle button */
+    margin-top: 0px; /* Remove top margin */
+    margin-bottom: 0px; /* Remove bottom margin */
+    color: #000; /* Set button color to black */
+  }
+
+  /* Adjust the title size */
+  .header_title {
+    font-size: 40px; /* Set header title font size */
+    line-height: 1.2; /* Set line height for better spacing */
+  }
+
+  /* Adjust the subtitle size */
+  .header_subtitle {
+    font-size: 15px; /* Set header subtitle font size */
+    line-height: 1.8; /* Set line height for better spacing */
+  }
+}
+
+ /* Common padding for background sections and carousel items */
+.home-bg,
+.h-100vh.jarallax,
+.h-100vh.bg-dark,
+.home-bg-slider .carousel-item {
+  padding: 170px 0 110px 0; /* Set top, right, bottom, and left padding */
+}
+
+/* Set height properties for full-height sections */
+.h-100vh,
+.home-bg-slider .carousel-item {
+  height: auto; /* Allow height to adjust automatically */
+}
+
+/* Hide the scroll down button */
+.scroll_down {
+  display: none; /* The scroll down button is not displayed */
+}
+
+/* Remove clipping path from the home section */
+.clip-home {
+  clip-path: none; /* No clipping path applied */
+}
+
+/* Set logo image height in the navigation */
+.custom-nav .navbar-brand.logo img {
+  height: 26px; /* Set the height of the logo image */
+}
+
+/* Hide the after pseudo-element for specific list items */
+.about-detail .about-work li::after,
+.work_menu li:after {
+  display: none; /* Hide the after pseudo-element */
+  content: ""; /* No content for the after element */
+}
+
+/* Adjust margins for items in the about section */
+.about-detail .about-work li {
+  margin-right: 7px; /* Right margin for list items */
+  margin-left: 7px; /* Left margin for list items */
+}
+
+/* Line height for copyright text */
+.copy-rights {
+  line-height: 26px; /* Set line height for copyright text */
+}
+
+/* Center floating elements */
+.float_none.float-right,
+.float_none.float-left {
+  float: none !important; /* Remove float properties */
+  text-align: center; /* Center-align text */
+}
+
+/* Margin for links in the work menu */
+.work_menu li a {
+  margin: 8px 10px; /* Set margins for links in the work menu */
+}
+
+/* Adjust margin for odd comments in the blog */
+.comment_blog .comment_read:nth-child(odd) {
+  margin-left: 34px; /* Add left margin for odd comments */
+}
+
+/* Font size for blog detail titles */
+.blog_detail h4 {
+  font-size: 18px; /* Set font size for blog detail titles */
+}
+
+/* Font size for blockquote in blog details */
+.blog_detail p.blockquote {
+  font-size: 14px !important; /* Set font size for blockquote */
+}
+
+/* Set font size for table content */
+table {
+  font-size: 14px; /* Set font size for table elements */
+}
+
+/* Media query for responsive design on screens smaller than 576 pixels */
+@media (max-width: 576px) {
+  .section {
+    padding: 50px 0; /* Set padding for sections */
+  }
+
+  .home-bg {
+    padding: 146px 0; /* Adjust padding for home background */
+  }
+}
